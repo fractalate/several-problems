@@ -1,11 +1,11 @@
 # Several Problems
 
-Prefix legend:
+## Prefix Legend
 
 * `PE` - [Project Euler](https://projecteuler.net/)
 * `UVA` - [UVa Online Judge](https://onlinejudge.org/)
 
-Languages:
+## Languages
 
 **Go**
 
