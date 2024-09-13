@@ -1,0 +1,37 @@
+# Several Problems
+
+Prefix legend:
+
+* `PE` - [Project Euler](https://projecteuler.net/)
+* `UVA` - [UVa Online Judge](https://onlinejudge.org/)
+
+Languages:
+
+**Go**
+
+```
+go run PE-1.go
+```
+
+**Julia**
+
+```
+julia PE-1.jl
+```
+
+**Python**
+
+```
+python3 PE-1.py
+```
+
+**Rust**
+
+```bash
+cargo install rust-script
+rust-script PE-1.rs
+```
+
+## Solutions
+
+{PROBLEM_TABLE}

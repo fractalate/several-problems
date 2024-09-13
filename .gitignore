@@ -1,2 +1,6 @@
-# For Rust.
+# Python Support
+*.pyc
+__pycache__/
+
+# Rust Support
 /target

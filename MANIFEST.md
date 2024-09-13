@@ -1,10 +1,35 @@
 # Manifest
 
-This document outlines special files which are added to support each of the languages used in
-this project. My hope is that this listing will help others sort through all the unfamiliar
-files from languages they may not have used before.
+## Documents
 
-## Files for Rust
+* [README.md](./README.md)
+* [MANIFEST.md](./MANIFEST.md)
+* [journal](./journal)
+
+## Utilities
+
+* [make.rs](./make.rs)
+
+## Language Support
+
+### Go
+
+Solutions have `.go` file extension.
+
+### Julia
+
+Solutions have `.jl` file extension.
+
+### Python
+
+Solutions have `.py` file extension.
+
+* [.gitignore](./.gitignore)
+
+### Rust
+
+Solutions have `.rs` file extension.
+A Cargo project is present to more easily integrate with editor plugins like [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
 
 * [Cargo.lock](./Cargo.lock)
 * [Cargo.toml](./Cargo.toml)
