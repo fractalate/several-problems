@@ -2,13 +2,20 @@
 
 ## Documents
 
+* [files/README.md.template](./files/README.md.template)
 * [README.md](./README.md)
 * [MANIFEST.md](./MANIFEST.md)
-* [journal](./journal)
 
 ## Utilities
 
 * [make.rs](./make.rs)
+
+## Sample Input/Output
+
+Sample input/output files are located in [files](./files) and are prefixed with the solution's file name.
+
+* Extension `.input`.
+* Extension `.output`.
 
 ## Language Support
 

@@ -1,4 +1,8 @@
 // UVa Online Judge 100
+//
+// Sample Input/Output:
+//  * files/UVA-100.input
+//  * files/UVA-100.output
 
 use std::io;
 
