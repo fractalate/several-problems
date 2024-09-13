@@ -38,7 +38,7 @@ fn slice_template_name(buf: &str) -> Result<(&str, &str), &'static str> {
   Err("missing closing brace")
 }
 
-fn output_problem_table<'a>(output: &mut File) -> io::Result<()> {
+fn output_solutions_table<'a>(output: &mut File) -> io::Result<()> {
   let current_dir = std::env::current_dir()?;
 
   let mut any_solutions = BTreeSet::new();
@@ -103,7 +103,6 @@ fn output_problem_table<'a>(output: &mut File) -> io::Result<()> {
   }
 
   output.write_all("<table>\n".as_bytes())?;
-
   output.write_all("<thead>\n".as_bytes())?;
   output.write_all("<tr>\n".as_bytes())?;
   for lang in &langs {
@@ -113,7 +112,6 @@ fn output_problem_table<'a>(output: &mut File) -> io::Result<()> {
   }
   output.write_all("</tr>\n".as_bytes())?;
   output.write_all("</thead>\n".as_bytes())?;
-  
   output.write_all("<tbody>\n".as_bytes())?;
   for (pset, designator) in &any_solutions {
     output.write_all("<tr>\n".as_bytes())?;
@@ -128,6 +126,7 @@ fn output_problem_table<'a>(output: &mut File) -> io::Result<()> {
     output.write_all("</tr>\n".as_bytes())?;
   }
   output.write_all("</tbody>\n".as_bytes())?;
+  output.write_all("</table>\n".as_bytes())?;
 
   Ok(())
 }
@@ -136,8 +135,8 @@ fn output_evaluated_template<'a>(buf: &'a str, output: &mut File) -> io::Result<
   let (template_name, rest) = slice_template_name(buf)
     .map_err(|error| Error::new(ErrorKind::Other, error))?;
 
-  if template_name == "PROBLEM_TABLE" {
-    output_problem_table(output)?
+  if template_name == "SOLUTIONS_TABLE" {
+    output_solutions_table(output)?
   } else {
     return Err(
       Error::new(ErrorKind::Other, format!("invalid template name {}", template_name))

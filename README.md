@@ -1,36 +1,11 @@
 # Several Problems
 
+Solutions to problem sets and competitive programming problems in various languages.
+
 ## Prefix Legend
 
 * `PE` - [Project Euler](https://projecteuler.net/)
 * `UVA` - [UVa Online Judge](https://onlinejudge.org/)
-
-## Languages
-
-**Go**
-
-```
-go run PE-1.go
-```
-
-**Julia**
-
-```
-julia PE-1.jl
-```
-
-**Python**
-
-```
-python3 PE-1.py
-```
-
-**Rust**
-
-```bash
-cargo install rust-script
-rust-script PE-1.rs
-```
 
 ## Solutions
 
@@ -57,4 +32,36 @@ rust-script PE-1.rs
 <td><a href="./UVA-100.rs">UVA-100.rs</a></td>
 </tr>
 </tbody>
+</table>
 
+
+## Help
+
+Please see [MANIFEST.md](./MANIFEST.md) for an outline of the files in this project.
+
+### Languages
+
+**Go**
+
+```
+go run PE-1.go
+```
+
+**Julia**
+
+```
+julia PE-1.jl
+```
+
+**Python**
+
+```
+python3 PE-1.py
+```
+
+**Rust**
+
+```bash
+cargo install rust-script
+rust-script PE-1.rs
+```
