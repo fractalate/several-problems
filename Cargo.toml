@@ -14,3 +14,7 @@ path = "PE-1.rs"
 [[bin]]
 name = "UVA-100"
 path = "UVA-100.rs"
+
+[[bin]]
+name = "UVA-503"
+path = "UVA-503.rs"

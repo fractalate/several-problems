@@ -31,6 +31,12 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td><a href="./UVA-100.rs">UVA-100.rs</a></td>
 </tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="./UVA-503.rs">UVA-503.rs</a></td>
+</tr>
 </tbody>
 </table>
 
