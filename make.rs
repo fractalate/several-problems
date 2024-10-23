@@ -62,6 +62,11 @@ fn output_solutions_table<'a>(output: &mut File) -> io::Result<()> {
       let mut pset = "";
       let mut lang = "";
 
+      if file_name.starts_with("ICPC-") {
+        prefix = "ICPC-";
+        pset = "ICPC";
+      }
+      else
       if file_name.starts_with("PE-") {
         prefix = "PE-";
         pset = "PE";

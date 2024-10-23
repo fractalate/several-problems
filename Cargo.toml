@@ -3,6 +3,13 @@ name = "several-problems"
 version = "0.1.0"
 edition = "2021"
 
+[dependencies]
+itertools = "0.13.0"
+
+[[bin]]
+name = "ICPC-NAC2021A"
+path = "ICPC-NAC2021A.rs"
+
 [[bin]]
 name = "make"
 path = "make.rs"

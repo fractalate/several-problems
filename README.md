@@ -4,6 +4,7 @@ Solutions to problem sets and competitive programming problems in various langua
 
 ## Prefix Legend
 
+* `ICPC` - [International Collegiate Programming Contest](https://icpc.global/) ([Problems Archive](https://icpcarchive.github.io/))
 * `PE` - [Project Euler](https://projecteuler.net/)
 * `UVA` - [UVa Online Judge](https://onlinejudge.org/)
 
@@ -19,6 +20,12 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 </thead>
 <tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="./ICPC-NAC2021A.rs">ICPC-NAC2021A.rs</a></td>
+</tr>
 <tr>
 <td><a href="./PE-1.go">PE-1.go</a></td>
 <td><a href="./PE-1.jl">PE-1.jl</a></td>
