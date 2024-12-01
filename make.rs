@@ -71,6 +71,11 @@ fn output_solutions_table<'a>(output: &mut File) -> io::Result<()> {
         prefix = "UVA-";
         pset = "UVA";
       }
+      else
+      if file_name.starts_with("AOC-") {
+        prefix = "AOC-";
+        pset = "AOC";
+      }
 
       if file_name.ends_with(".jl") {
         suffix = ".jl";
