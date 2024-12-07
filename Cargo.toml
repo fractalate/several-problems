@@ -32,6 +32,14 @@ name = "AOC-2024-3B"
 path = "AOC-2024-3B.rs"
 
 [[bin]]
+name = "AOC-2024-4A"
+path = "AOC-2024-4A.rs"
+
+[[bin]]
+name = "AOC-2024-4B"
+path = "AOC-2024-4B.rs"
+
+[[bin]]
 name = "PE-1"
 path = "PE-1.rs"
 
