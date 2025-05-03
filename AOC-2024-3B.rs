@@ -15,12 +15,7 @@ fn main() {
   let mut lines = stdin.lock().lines();
   while let Some(Ok(line)) = lines.next() {
     
-    let mut results = vec![];
     for (_, [operator, arg1, arg2]) in re.captures_iter(&line).map(|c| c.extract()) {
-        results.push((operator, arg1, arg2));
-    }
-
-    for (operator, arg1, arg2) in results {
       if operator.starts_with("mul") {
         if active {
           ttl += arg1.parse::<u64>().unwrap() * arg2.parse::<u64>().unwrap();
