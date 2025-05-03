@@ -1,15 +1,16 @@
 use std::io;
 use std::io::BufRead;
+use std::collections::BinaryHeap;
 
 // We can find the difference between the lists by reading in the pairs
-// of numbers into two separate lists, sorting each list, then iterating
-// through both lists finding the difference between the elements. Add
-// that difference to a running total.
+// of numbers into two separate priority heaps, then popping through
+// both heaps, finding the difference between the elements. Add that
+// difference to a running total.
 
 fn main() {
-  // Our two lists.
-  let mut lefts: Vec<i32> = Vec::new();
-  let mut rights: Vec<i32> = Vec::new();
+  // Our two heaps.
+  let mut lefts: BinaryHeap<i32> = BinaryHeap::new();
+  let mut rights: BinaryHeap<i32> = BinaryHeap::new();
 
   // Read all the lines.
   let stdin = io::stdin();
@@ -18,22 +19,18 @@ fn main() {
     // The line should be made of two numbers separated by whitespace.
     let parts: Vec<&str> = line.split_whitespace().collect();
     assert!(parts.len() == 2);
-    // Collect the values into our lists.
+    // Collect the values into our heaps.
     let left = parts[0].parse::<i32>().unwrap();
     lefts.push(left);
     let right = parts[1].parse::<i32>().unwrap();
     rights.push(right);
   }
 
-  // Sort so that the smallest and so on between the two lists are in the same positions
-  // in their respective lists.
-  lefts.sort();
-  rights.sort();
-
   // Keep a running total of the differences.
   let mut ttl = 0;
-  for i in 0..lefts.len() {
-    ttl += (lefts[i] - rights[i]).abs();
+  while let Some(left) = lefts.pop() {
+    let right = rights.pop().unwrap();
+    ttl += (left - right).abs();
   }
 
   println!("{}", ttl);
