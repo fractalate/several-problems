@@ -63,9 +63,12 @@ fn read_matrix() -> (Vec<Vec<u8>>, usize, usize, usize, usize) {
   return (matrix, x, y, x_bound, y_bound);
 }
 
-fn main() {
-  let (mut matrix, mut x, mut y, x_bound, y_bound) = read_matrix();
+enum SimulationResult {
+  OutOfBounds,
+  Loop,
+}
 
+fn run_simulation(mut matrix: Vec<Vec<u8>>, mut x: usize, mut y: usize, x_bound: usize, y_bound: usize) -> SimulationResult {
   let mut count = 1;
   let mut count_distinct = 1;
 
@@ -74,8 +77,7 @@ fn main() {
     let (nx, ny) = get_next_position(c, x, y).unwrap();
 
     if ny >= y_bound || nx >= x_bound { // Encompasses wrap around from 0 -> usize::MAX.
-      println!("out of bounds");
-      break;
+      return SimulationResult::OutOfBounds;
     }
 
     let nc = matrix[ny][nx];
@@ -93,14 +95,34 @@ fn main() {
 
       // If they haven't found a new space in two times around, then they're in a cycle.
       if count_distinct < count.div(2) {
-        println!("looping");
-        break;
+        return SimulationResult::Loop;
       }
 
       x = nx;
       y = ny;
     }
   }
+}
 
-  println!("{count_distinct}");
+fn main() {
+  let (matrix, x, y, x_bound, y_bound) = read_matrix();
+
+  let mut count_loops = 0;
+
+  for iy in 0..y_bound {
+    for ix in 0..x_bound {
+      if matrix[iy][ix] == b'.' {
+        let mut matrix2: Vec<Vec<u8>> = matrix.iter().map(|row| row.clone()).collect();
+        matrix2[iy][ix] = b'#';
+        match run_simulation(matrix2, x, y, x_bound, y_bound) {
+          SimulationResult::Loop => {
+            count_loops += 1;
+          },
+          _ => {},
+        }
+      }
+    }
+  }
+
+  println!("{count_loops}");
 }
