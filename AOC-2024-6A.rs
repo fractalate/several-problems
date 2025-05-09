@@ -35,14 +35,13 @@ fn get_rot_90(c: u8) -> Option<u8> {
   return None;
 }
 
-
-fn main() {
+fn read_matrix() -> (Vec<Vec<u8>>, usize, usize, usize, usize) {
   let mut matrix: Vec<Vec<u8>> = Vec::new();
   let mut x = 0;
   let mut y = 0;
-
   let mut x_bound = 0;
   let mut y_bound = 0;
+
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
   while let Some(Ok(line)) = lines.next() {
@@ -60,8 +59,12 @@ fn main() {
     matrix.push(bytes);
     y_bound += 1;
   }
-  let x_bound = x_bound;
-  let y_bound = y_bound;
+
+  return (matrix, x, y, x_bound, y_bound);
+}
+
+fn main() {
+  let (mut matrix, mut x, mut y, x_bound, y_bound) = read_matrix();
 
   let mut count = 1;
   let mut count_distinct = 1;
@@ -81,16 +84,19 @@ fn main() {
     } else if nc == b'.' || nc == b'X' {
       matrix[y][x] = b'X';
       matrix[ny][nx] = c;
-      x = nx;
-      y = ny;
-      count += 1;
+
       if nc != b'X' {
         count_distinct += 1;
       }
+      count += 1;
+
       // If they haven't found a new space in two times around, then they're in a cycle.
       if count_distinct < count.div(2) {
         break;
       }
+
+      x = nx;
+      y = ny;
     }
   }
 
