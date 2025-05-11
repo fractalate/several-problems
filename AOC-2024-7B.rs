@@ -5,23 +5,15 @@ fn numcat(a: u64, b: u64) -> u64 {
   return format!("{a}{b}").parse::<u64>().unwrap();
 }
 
-fn can_reach_target(target: u64, items: &Vec<u64>) -> bool {
-  if items.len() == 1 {
-    return items[0] == target;
-  } else {
-    let mut rest = vec![items[0] + items[1]];
-    rest.extend_from_slice(&items[2..]);
-    if can_reach_target(target, &rest) {
-      return true;
-    }
-    rest[0] = items[0] * items[1];
-    if can_reach_target(target, &rest) {
-      return true;
-    }
-    rest[0] = numcat(items[0], items[1]);
-    if can_reach_target(target, &rest) {
-      return true;
-    }
+fn can_reach_target(target: u64, accumulated: u64, items: &[u64]) -> bool {
+  if items.len() == 0 {
+    return accumulated == target;
+  } else if can_reach_target(target, accumulated + items[0], &items[1..]) {
+    return true;
+  } else if can_reach_target(target, accumulated * items[0], &items[1..]) {
+    return true;
+  } else if can_reach_target(target, numcat(accumulated, items[0]), &items[1..]) {
+    return true;
   }
   return false;
 }
@@ -45,7 +37,7 @@ fn main() {
     }
     assert!(items.len() > 0);
 
-    if can_reach_target(target, &items) {
+    if can_reach_target(target, items[0], &items[1..]) {
       total += target;
     }
   }
