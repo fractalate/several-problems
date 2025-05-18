@@ -8,76 +8,76 @@ name = "make"
 path = "make.rs"
 
 [[bin]]
-name = "AOC-2024-1A"
-path = "AOC-2024-1A.rs"
+name = "AOC-2024-01A"
+path = "AOC-2024-01A.rs"
 
 [[bin]]
-name = "AOC-2024-1B"
-path = "AOC-2024-1B.rs"
+name = "AOC-2024-01B"
+path = "AOC-2024-01B.rs"
 
 [[bin]]
-name = "AOC-2024-2A"
-path = "AOC-2024-2A.rs"
+name = "AOC-2024-02A"
+path = "AOC-2024-02A.rs"
 
 [[bin]]
-name = "AOC-2024-2B"
-path = "AOC-2024-2B.rs"
+name = "AOC-2024-02B"
+path = "AOC-2024-02B.rs"
 
 [[bin]]
-name = "AOC-2024-3A"
-path = "AOC-2024-3A.rs"
+name = "AOC-2024-03A"
+path = "AOC-2024-03A.rs"
 
 [[bin]]
-name = "AOC-2024-3B"
-path = "AOC-2024-3B.rs"
+name = "AOC-2024-03B"
+path = "AOC-2024-03B.rs"
 
 [[bin]]
-name = "AOC-2024-4A"
-path = "AOC-2024-4A.rs"
+name = "AOC-2024-04A"
+path = "AOC-2024-04A.rs"
 
 [[bin]]
-name = "AOC-2024-4B"
-path = "AOC-2024-4B.rs"
+name = "AOC-2024-04B"
+path = "AOC-2024-04B.rs"
 
 [[bin]]
-name = "AOC-2024-5A"
-path = "AOC-2024-5A.rs"
+name = "AOC-2024-05A"
+path = "AOC-2024-05A.rs"
 
 [[bin]]
-name = "AOC-2024-5B"
-path = "AOC-2024-5B.rs"
+name = "AOC-2024-05B"
+path = "AOC-2024-05B.rs"
 
 [[bin]]
-name = "AOC-2024-6A"
-path = "AOC-2024-6A.rs"
+name = "AOC-2024-06A"
+path = "AOC-2024-06A.rs"
 
 [[bin]]
-name = "AOC-2024-6B"
-path = "AOC-2024-6B.rs"
+name = "AOC-2024-06B"
+path = "AOC-2024-06B.rs"
 
 [[bin]]
-name = "AOC-2024-7A"
-path = "AOC-2024-7A.rs"
+name = "AOC-2024-07A"
+path = "AOC-2024-07A.rs"
 
 [[bin]]
-name = "AOC-2024-7B"
-path = "AOC-2024-7B.rs"
+name = "AOC-2024-07B"
+path = "AOC-2024-07B.rs"
 
 [[bin]]
-name = "AOC-2024-8A"
-path = "AOC-2024-8A.rs"
+name = "AOC-2024-08A"
+path = "AOC-2024-08A.rs"
 
 [[bin]]
-name = "AOC-2024-8B"
-path = "AOC-2024-8B.rs"
+name = "AOC-2024-08B"
+path = "AOC-2024-08B.rs"
 
 [[bin]]
-name = "AOC-2024-9A"
-path = "AOC-2024-9A.rs"
+name = "AOC-2024-09A"
+path = "AOC-2024-09A.rs"
 
 [[bin]]
-name = "AOC-2024-9B"
-path = "AOC-2024-9B.rs"
+name = "AOC-2024-09B"
+path = "AOC-2024-09B.rs"
 
 [[bin]]
 name = "PE-1"
