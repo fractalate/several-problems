@@ -51,13 +51,13 @@ fn read_map() -> Map {
 fn calculate_scores(map: &Map) -> i64 {
   let mut queue: VecDeque<(usize, usize)> = VecDeque::new();
   let mut visited: HashSet<(usize, usize)> = HashSet::new();
-  let mut reachable_nines: HashMap<(usize, usize), HashSet<(usize, usize)>> = HashMap::new();
+  let mut reachable_nines: HashMap<(usize, usize), i64> = HashMap::new();
   let mut total_score = 0;
 
   for y in 0..map.height {
     for x in 0..map.width {
       if map.data[y][x] == 9 {
-        reachable_nines.insert((x, y), HashSet::from([(x, y)]));
+        reachable_nines.insert((x, y), 1);
         queue.push_back((x, y));
       }
     }
@@ -71,9 +71,9 @@ fn calculate_scores(map: &Map) -> i64 {
           // Any 9 reachable by the parent node is reachable by the child.
           if let Some(parent_nines) = reachable_nines.get(&(x, y)) {
             let new_nines = if let Some(nines) = reachable_nines.get(&(x2, y2)) {
-              nines.union(&parent_nines).cloned().collect()
+              nines + parent_nines
             } else {
-              parent_nines.clone()
+              *parent_nines
             };
 
             reachable_nines.insert((x2, y2), new_nines);
@@ -94,7 +94,7 @@ fn calculate_scores(map: &Map) -> i64 {
     // Sum the number of ways to get to each 9.
     if let Some(nines) = reachable_nines.remove(&(x, y)) {
       if map.data[y][x] == 0 {
-        total_score += nines.len();
+        total_score += nines;
       }
     }
   }
