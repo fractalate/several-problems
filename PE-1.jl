@@ -1,4 +1,4 @@
-# Project Euler - Problem 1
+# Project Euler 1
 
 # The problem asks for the sum of all numbers which are multiples of 3 or 5
 # that are below 1000. This can be done with triangle numbers which give an
@@ -21,4 +21,5 @@ function find_sum_of_multiples_of_3_or_5_below(n)
   )
 end
 
+println(find_sum_of_multiples_of_3_or_5_below(10))
 println(find_sum_of_multiples_of_3_or_5_below(1000))

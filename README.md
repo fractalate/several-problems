@@ -160,6 +160,78 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td><a href="./PE-10.jl">PE-10.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-11.jl">PE-11.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-12.jl">PE-12.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-13.jl">PE-13.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-14.jl">PE-14.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-15.jl">PE-15.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-16.jl">PE-16.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-17.jl">PE-17.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-18.jl">PE-18.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-19.jl">PE-19.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-2.jl">PE-2.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-20.jl">PE-20.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td></td>
 <td></td>
 <td><a href="./PE-21.rs">PE-21.rs</a></td>
@@ -169,6 +241,48 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td><a href="./PE-22.rs">PE-22.rs</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-3.jl">PE-3.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-4.jl">PE-4.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-5.jl">PE-5.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-6.jl">PE-6.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-7.jl">PE-7.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-8.jl">PE-8.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-9.jl">PE-9.jl</a></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td></td>
@@ -188,25 +302,34 @@ Please see [MANIFEST.md](./MANIFEST.md) for an outline of the files in this proj
 
 **Go**
 
-```
+```bash
 go run PE-1.go
 ```
 
 **Julia**
 
+In the `julia` interpreter:
+
+
+```julia
+using Pkg
+Pkg.add("Primes")
 ```
+
+then
+
+```bash
 julia PE-1.jl
 ```
 
 **Python**
 
-```
+```bash
 python3 PE-1.py
 ```
 
 **Rust**
 
 ```bash
-cargo install rust-script
-rust-script PE-1.rs
+cargo run --bin PE-1
 ```
