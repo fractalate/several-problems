@@ -96,16 +96,16 @@ name = "AOC-2024-11B"
 path = "AOC-2024-11B.rs"
 
 [[bin]]
-name = "PE-1"
-path = "PE-1.rs"
+name = "PE-001"
+path = "PE-001.rs"
 
 [[bin]]
-name = "PE-21"
-path = "PE-21.rs"
+name = "PE-021"
+path = "PE-021.rs"
 
 [[bin]]
-name = "PE-22"
-path = "PE-22.rs"
+name = "PE-022"
+path = "PE-022.rs"
 
 [[bin]]
 name = "UVA-100"

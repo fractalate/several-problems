@@ -153,80 +153,122 @@ Solutions to problem sets and competitive programming problems in various langua
 <td><a href="./AOC-2024-11B.rs">AOC-2024-11B.rs</a></td>
 </tr>
 <tr>
-<td><a href="./PE-1.go">PE-1.go</a></td>
-<td><a href="./PE-1.jl">PE-1.jl</a></td>
-<td><a href="./PE-1.py">PE-1.py</a></td>
-<td><a href="./PE-1.rs">PE-1.rs</a></td>
+<td><a href="./PE-001.go">PE-001.go</a></td>
+<td><a href="./PE-001.jl">PE-001.jl</a></td>
+<td><a href="./PE-001.py">PE-001.py</a></td>
+<td><a href="./PE-001.rs">PE-001.rs</a></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-10.jl">PE-10.jl</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-11.jl">PE-11.jl</a></td>
+<td><a href="./PE-002.jl">PE-002.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-12.jl">PE-12.jl</a></td>
+<td><a href="./PE-003.jl">PE-003.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-13.jl">PE-13.jl</a></td>
+<td><a href="./PE-004.jl">PE-004.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-14.jl">PE-14.jl</a></td>
+<td><a href="./PE-005.jl">PE-005.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-15.jl">PE-15.jl</a></td>
+<td><a href="./PE-006.jl">PE-006.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-16.jl">PE-16.jl</a></td>
+<td><a href="./PE-007.jl">PE-007.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-17.jl">PE-17.jl</a></td>
+<td><a href="./PE-008.jl">PE-008.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-18.jl">PE-18.jl</a></td>
+<td><a href="./PE-009.jl">PE-009.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-19.jl">PE-19.jl</a></td>
+<td><a href="./PE-010.jl">PE-010.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-2.jl">PE-2.jl</a></td>
+<td><a href="./PE-011.jl">PE-011.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><a href="./PE-20.jl">PE-20.jl</a></td>
+<td><a href="./PE-012.jl">PE-012.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-013.jl">PE-013.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-014.jl">PE-014.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-015.jl">PE-015.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-016.jl">PE-016.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-017.jl">PE-017.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-018.jl">PE-018.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-019.jl">PE-019.jl</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="./PE-020.jl">PE-020.jl</a></td>
 <td></td>
 <td></td>
 </tr>
@@ -234,55 +276,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
-<td><a href="./PE-21.rs">PE-21.rs</a></td>
+<td><a href="./PE-021.rs">PE-021.rs</a></td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td></td>
-<td><a href="./PE-22.rs">PE-22.rs</a></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-3.jl">PE-3.jl</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-4.jl">PE-4.jl</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-5.jl">PE-5.jl</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-6.jl">PE-6.jl</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-7.jl">PE-7.jl</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-8.jl">PE-8.jl</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="./PE-9.jl">PE-9.jl</a></td>
-<td></td>
-<td></td>
+<td><a href="./PE-022.rs">PE-022.rs</a></td>
 </tr>
 <tr>
 <td></td>
@@ -303,7 +303,7 @@ Please see [MANIFEST.md](./MANIFEST.md) for an outline of the files in this proj
 **Go**
 
 ```bash
-go run PE-1.go
+go run PE-001.go
 ```
 
 **Julia**
@@ -319,17 +319,17 @@ Pkg.add("Primes")
 then
 
 ```bash
-julia PE-1.jl
+julia PE-001.jl
 ```
 
 **Python**
 
 ```bash
-python3 PE-1.py
+python3 PE-001.py
 ```
 
 **Rust**
 
 ```bash
-cargo run --bin PE-1
+cargo run --bin PE-001
 ```

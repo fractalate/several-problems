@@ -21,7 +21,7 @@ Please see [MANIFEST.md](./MANIFEST.md) for an outline of the files in this proj
 **Go**
 
 ```bash
-go run PE-1.go
+go run PE-001.go
 ```
 
 **Julia**
@@ -37,17 +37,17 @@ Pkg.add("Primes")
 then
 
 ```bash
-julia PE-1.jl
+julia PE-001.jl
 ```
 
 **Python**
 
 ```bash
-python3 PE-1.py
+python3 PE-001.py
 ```
 
 **Rust**
 
 ```bash
-cargo run --bin PE-1
+cargo run --bin PE-001
 ```
