@@ -41,8 +41,8 @@ fn main() {
   let mut lines = stdin.lock().lines();
   while let Some(Ok(line)) = lines.next() {
     let parts: Vec<&str> = line.split_whitespace().collect();
+    assert!(parts.len() == 2);
     let s = score(parts[0], parts[1]);
-    println!("{}", s);
     total += s;
   }
   println!("{}", total);

@@ -17,7 +17,7 @@ fn main() {
       let v = line.parse::<i64>().unwrap();
       total += v;
     }
-  } 
+  }
   if total > maximum {
     maximum = total;
   }
