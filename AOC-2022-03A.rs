@@ -3,12 +3,13 @@ use std::io::BufRead;
 use std::ops::Div;
 use std::collections::HashSet;
 
-fn letter_priority(me: char) -> u32 {
+fn letter_priority(me: char) -> Option<u32> {
   if me >= 'a' && me <= 'z' {
-    return u32::from(me) - u32::from('a') + 1;
-  } else {
-    return u32::from(me) - u32::from('A') + 1 + 26;
+    return Some(u32::from(me) - u32::from('a') + 1);
+  } else if me >= 'A' && me <= 'Z' {
+    return Some(u32::from(me) - u32::from('A') + 1 + 26);
   }
+  return None;
 }
 
 fn main() {
@@ -19,19 +20,12 @@ fn main() {
   while let Some(Ok(line)) = lines.next() {
     let line = line.to_string();
     let half = line.len().div(2);
-    let mut left: HashSet<char> = HashSet::new();
-    let lstr = &line[..half];
-    for c in lstr.chars() {
-      left.insert(c);
-    }
-    let rstr = &line[half..];
-    let mut right: HashSet<char> = HashSet::new();
-    for c in rstr.chars() {
-      right.insert(c);
-    }
+    let left: HashSet<char> = line[..half].chars().into_iter().collect();
+    let right: HashSet<char> = line[half..].chars().into_iter().collect();
+    
     let common = left.intersection(&right);
     for c in common {
-      total += letter_priority(*c);
+      total += letter_priority(*c).unwrap();
     }
   }
   println!("{}", total);
