@@ -17,28 +17,24 @@ fn main() {
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
   let mut group: i64 = 0;
-  let mut common_common: HashSet<char> = HashSet::new();
+  let mut common: HashSet<char> = HashSet::new();
   while let Some(Ok(line)) = lines.next() {
-    let line = line.to_string();
-    let common: HashSet<char> = line[..].chars().into_iter().collect();
+    let chars: HashSet<char> = line.chars().into_iter().collect();
 
     group += 1;
 
     if group == 1 {
-      common_common = common.clone();
+      common = chars.clone();
     } else if group <= 2 {
-      common_common = common.intersection(&common_common).map(|x| *x).collect();
+      common = chars.intersection(&common).map(|x| *x).collect();
     } else {
-      common_common = common.intersection(&common_common).map(|x| *x).collect();
-      for c in common_common.clone() {
+      common = chars.intersection(&common).map(|x| *x).collect();
+      for c in common.clone() {
         total += letter_priority(c).unwrap();
       }
-      common_common.clear();
+      common.clear();
       group = 0;
     }
-  }
-  for c in common_common.clone() {
-    total += letter_priority(c).unwrap();
   }
   println!("{}", total);
 }
