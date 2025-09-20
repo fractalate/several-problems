@@ -1,29 +1,37 @@
 use std::io;
 use std::io::BufRead;
+use std::collections::BinaryHeap;
+
+const COUNT_TOPS: usize = 3;
 
 fn main() {
   let mut total: i64 = 0;
+  let mut top: BinaryHeap<i64> = BinaryHeap::new();
+  let mut done = false;
 
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
-  let mut collection: Vec<i64> = Vec::new();
-  while let Some(Ok(line)) = lines.next() { // TODO: combine the no-thing-found condition action with the post-loop action
-    if line.len() == 0 {
-      collection.push(total);
-      total = 0;
+
+  while !done {
+    let mut line = "".to_string();
+    if let Some(Ok(this_line)) = lines.next() {
+      line = this_line;
     } else {
+      done = true;
+    }
+    if line.len() > 0 {
       let v = line.parse::<i64>().unwrap();
       total += v;
+    } else {
+      top.push(-total); // negation for max heap
+      if top.len() > COUNT_TOPS {
+        top.pop();
+      }
+      total = 0;
     }
   }
-  collection.push(total);
-  collection.sort();
-  collection.reverse();
 
-  let mut grand_total = 0;
-  for i in 0..3 {
-    grand_total += collection[i];
-  }
+  let maximum = -top.iter().sum::<i64>(); // negation for max heap
 
-  println!("{}", grand_total);
+  println!("{}", maximum);
 }

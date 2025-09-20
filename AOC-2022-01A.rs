@@ -4,22 +4,26 @@ use std::io::BufRead;
 fn main() {
   let mut total: i64 = 0;
   let mut maximum: i64 = 0;
+  let mut done = false;
 
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
-  while let Some(Ok(line)) = lines.next() { // TODO: combine the no-thing-found condition action with the post-loop action
-    if line.len() == 0 {
-      if total > maximum {
-        maximum = total;
-      }
-      total = 0;
+
+  while !done {
+    let mut line = "".to_string();
+    if let Some(Ok(this_line)) = lines.next() {
+      line = this_line;
     } else {
+      done = true;
+    }
+    if line.len() > 0 {
       let v = line.parse::<i64>().unwrap();
       total += v;
+    } else {
+      maximum = maximum.max(total);
+      total = 0;
     }
   }
-  if total > maximum {
-    maximum = total;
-  }
+
   println!("{}", maximum);
 }
