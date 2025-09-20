@@ -24,6 +24,42 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td><a href="./AOC-2022-01A.rs">AOC-2022-01A.rs</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="./AOC-2022-01B.rs">AOC-2022-01B.rs</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="./AOC-2022-02A.rs">AOC-2022-02A.rs</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="./AOC-2022-02B.rs">AOC-2022-02B.rs</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="./AOC-2022-03A.rs">AOC-2022-03A.rs</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="./AOC-2022-03B.rs">AOC-2022-03B.rs</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
 <td><a href="./AOC-2024-01A.rs">AOC-2024-01A.rs</a></td>
 </tr>
 <tr>

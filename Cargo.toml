@@ -8,6 +8,30 @@ name = "make"
 path = "make.rs"
 
 [[bin]]
+name = "AOC-2022-01A"
+path = "AOC-2022-01A.rs"
+
+[[bin]]
+name = "AOC-2022-01B"
+path = "AOC-2022-01B.rs"
+
+[[bin]]
+name = "AOC-2022-02A"
+path = "AOC-2022-02A.rs"
+
+[[bin]]
+name = "AOC-2022-02B"
+path = "AOC-2022-02B.rs"
+
+[[bin]]
+name = "AOC-2022-03A"
+path = "AOC-2022-03A.rs"
+
+[[bin]]
+name = "AOC-2022-03B"
+path = "AOC-2022-03B.rs"
+
+[[bin]]
 name = "AOC-2024-01A"
 path = "AOC-2024-01A.rs"
 
