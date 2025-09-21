@@ -3,17 +3,17 @@ use std::io::BufRead;
 use std::ops::Div;
 use std::collections::HashSet;
 
-fn letter_priority(me: char) -> Option<u32> {
+fn letter_priority(me: char) -> Option<u64> {
   if me >= 'a' && me <= 'z' {
-    return Some(u32::from(me) - u32::from('a') + 1);
+    return Some(u64::from(me) - u64::from('a') + 1);
   } else if me >= 'A' && me <= 'Z' {
-    return Some(u32::from(me) - u32::from('A') + 1 + 26);
+    return Some(u64::from(me) - u64::from('A') + 1 + 26);
   }
   return None;
 }
 
 fn main() {
-  let mut total: u32 = 0;
+  let mut total: u64 = 0;
 
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
@@ -28,5 +28,6 @@ fn main() {
       total += letter_priority(*c).unwrap();
     }
   }
+
   println!("{}", total);
 }
