@@ -1,37 +1,47 @@
 use std::io;
 use std::io::BufRead;
 
-fn score_for_my_choice(me: &str) -> i64 {
-  if me == "X" {
-    return 1;
-  } else if me == "Y" {
-    return 2;
-  } else if me == "Z" {
-    return 3;
+const ROCK: i64 = 0;
+const PAPER: i64 = 1;
+const SCISSORS: i64 = 2;
+
+const LOSE: i64 = 0;
+const DRAW: i64 = 1;
+const WIN: i64 = 2;
+
+fn symbol_to_choice(symbol: &str) -> Option<i64> {
+  if symbol == "A" || symbol == "X" {
+    return Some(ROCK);
+  } else if symbol == "B" || symbol == "Y" {
+    return Some(PAPER);
+  } else if symbol == "C" || symbol == "Z" {
+    return Some(SCISSORS);
   }
-  return 0;
+  return None;
 }
 
-fn score(opponent: &str, me: &str) -> i64 {
-  let mut result: i64 = 0;
-
-  if opponent == "A" && me == "X" {
-    result += 3;
-  } else if opponent == "B" && me == "Y" {
-    result += 3;
-  } else if opponent == "C" && me == "Z" {
-    result += 3;
-  } else if opponent == "A" && me == "Y" {
-    result += 6;
-  } else if opponent == "B" && me == "Z" {
-    result += 6;
-  } else if opponent == "C" && me == "X" {
-    result += 6;
+fn determine_outcome(opponent_choice: i64, my_choice: i64) -> i64 {
+  let diff = opponent_choice - my_choice;
+  if diff == 0 {
+    return DRAW;
+  } else if diff == 1 || diff == -2 {
+    // ROCK - SCISSORS == -2, PAPER - ROCK == 1, SCISSORS - PAPER == 1
+    return LOSE;
   }
+  return WIN;
+}
 
-  result += score_for_my_choice(me);
+fn score_for_choice(choice: i64) -> i64 {
+  return choice + 1; // ROCK 1, PAPER 2, SCISSORS 3
+}
 
-  return result;
+fn score_for_outcome(outcome: i64) -> i64 {
+  return outcome * 3; // LOSE 0, DRAW 3, WIN 6
+}
+
+fn score(opponent_choice: i64, my_choice: i64) -> i64 {
+  let outcome = determine_outcome(opponent_choice, my_choice);
+  return score_for_outcome(outcome) + score_for_choice(my_choice);
 }
 
 fn main() {
@@ -40,10 +50,14 @@ fn main() {
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
   while let Some(Ok(line)) = lines.next() {
-    let parts: Vec<&str> = line.split_whitespace().collect();
-    assert!(parts.len() == 2);
-    let s = score(parts[0], parts[1]);
-    total += s;
+    let choices: Vec<&str> = line.split_whitespace().collect();
+    assert!(choices.len() == 2);
+
+    total += score(
+      symbol_to_choice(choices[0]).unwrap(),
+      symbol_to_choice(choices[1]).unwrap(),
+    );
   }
+
   println!("{}", total);
 }

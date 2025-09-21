@@ -1,51 +1,56 @@
 use std::io;
 use std::io::BufRead;
 
-fn score_for_my_choice(me: &str) -> i64 {
-  if me == "X" {
-    return 1;
-  } else if me == "Y" {
-    return 2;
-  } else if me == "Z" {
-    return 3;
+const ROCK: i64 = 0;
+const PAPER: i64 = 1;
+const SCISSORS: i64 = 2;
+
+const LOSE: i64 = 0;
+const DRAW: i64 = 1;
+const WIN: i64 = 2;
+
+fn symbol_to_choice(symbol: &str) -> Option<i64> {
+  if symbol == "A" {
+    return Some(ROCK);
+  } else if symbol == "B" {
+    return Some(PAPER);
+  } else if symbol == "C" {
+    return Some(SCISSORS);
   }
-  return 0;
+  return None;
 }
 
-fn score(opponent: &str, me: &str) -> i64 {
-  let mut result: i64 = 0;
-
-  let mut choice: &str = "";
-
-  if opponent == "A" && me == "X" {
-    choice = "Z";
-  } else if opponent == "B" && me == "X" {
-    choice = "X";
-  } else if opponent == "C" && me == "X" {
-    choice = "Y";
-  } else if opponent == "A" && me == "Y" {
-    choice = "X";
-    result += 3;
-  } else if opponent == "B" && me == "Y" {
-    choice = "Y";
-    result += 3;
-  } else if opponent == "C" && me == "Y" {
-    choice = "Z";
-    result += 3;
-  } else if opponent == "A" && me == "Z" {
-    choice = "Y";
-    result += 6;
-  } else if opponent == "B" && me == "Z" {
-    choice = "Z";
-    result += 6;
-  } else if opponent == "C" && me == "Z" {
-    choice = "X";
-    result += 6;
+fn symbol_to_outcome(symbol: &str) -> Option<i64> {
+  if symbol == "X" {
+    return Some(LOSE);
+  } else if symbol == "Y" {
+    return Some(DRAW);
+  } else if symbol == "Z" {
+    return Some(WIN);
   }
+  return None;
+}
 
-  result += score_for_my_choice(choice);
+fn determine_choice_for_outcome(opponent_choice: i64, outcome: i64) -> i64 {
+  if outcome == LOSE {
+    return (opponent_choice + 2) % 3;
+  } else if outcome == WIN {
+    return (opponent_choice + 1) % 3;
+  }
+  opponent_choice
+}
 
-  return result;
+fn score_for_choice(choice: i64) -> i64 {
+  return choice + 1; // ROCK 1, PAPER 2, SCISSORS 3
+}
+
+fn score_for_outcome(outcome: i64) -> i64 {
+  return outcome * 3; // LOSE 0, DRAW 3, WIN 6
+}
+
+fn score(opponent_choice: i64, outcome: i64) -> i64 {
+  let my_choice = determine_choice_for_outcome(opponent_choice, outcome);
+  return score_for_outcome(outcome) + score_for_choice(my_choice);
 }
 
 fn main() {
@@ -54,11 +59,14 @@ fn main() {
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
   while let Some(Ok(line)) = lines.next() {
-    let parts: Vec<&str> = line.split_whitespace().collect();
-    assert!(parts.len() == 2);
-    let s = score(parts[0], parts[1]);
-    println!("{}", s);
-    total += s;
+    let choices: Vec<&str> = line.split_whitespace().collect();
+    assert!(choices.len() == 2);
+
+    total += score(
+      symbol_to_choice(choices[0]).unwrap(),
+      symbol_to_outcome(choices[1]).unwrap(),
+    );
   }
+
   println!("{}", total);
 }
