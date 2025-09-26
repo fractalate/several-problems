@@ -48,7 +48,7 @@ fn read_map() -> Map {
   };
 }
 
-fn calculate_scores(map: &Map) -> i64 {
+fn calculate_scores(map: Map) -> i64 {
   let mut queue: VecDeque<(usize, usize)> = VecDeque::new();
   let mut visited: HashSet<(usize, usize)> = HashSet::new();
   let mut reachable_nines: HashMap<(usize, usize), HashSet<(usize, usize)>> = HashMap::new();
@@ -103,7 +103,7 @@ fn calculate_scores(map: &Map) -> i64 {
 }
 
 fn main() {
-  let mut map = read_map();
-  let final_score = calculate_scores(&mut map);
+  let map = read_map();
+  let final_score = calculate_scores(map);
   println!("{final_score}");
 }
