@@ -1,15 +1,37 @@
 // UVA-10685 - Nature
 //
 // https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1626
+//
+// Essentially we are given a directed graph (which may have cycles) and are asked to find
+// the length of the longest path of connected nodes representing the length of the longest
+// predator/prey chain.
 
 use std::collections::{HashMap, HashSet};
 use std::io::{self, Lines, StdinLock};
 use std::io::BufRead;
 
-fn read_vegetals(lines: &mut Lines<StdinLock<'static>>, count_vegetals: usize) -> Vec<String> {
+fn read_problem_statement(lines: &mut Lines<StdinLock<'static>>) -> Option<(usize, usize)> {
+  while let Some(Ok(line)) = lines.next() {
+    if line.len() == 0 {
+      continue;
+    }
+
+    let parts: Vec<&str> = line.split_whitespace().collect();
+    assert!(parts.len() == 2, "invalid problem statement");
+
+    let count_nodes: usize = parts[0].parse().expect("invalid node count");
+    let count_edges: usize = parts[1].parse().expect("invalid edge count");
+
+    return Some((count_nodes, count_edges));
+  }
+
+  return None
+}
+
+fn read_nodes(lines: &mut Lines<StdinLock<'static>>, count_nodes: usize) -> Vec<String> {
   let mut result: Vec<String> = Vec::new();
 
-  for _ in 0..count_vegetals {
+  for _ in 0..count_nodes {
     if let Some(Ok(line)) = lines.next() {
       result.push(line.to_string());
     }
@@ -18,81 +40,68 @@ fn read_vegetals(lines: &mut Lines<StdinLock<'static>>, count_vegetals: usize) -
   return result;
 }
 
-fn read_links(lines: &mut Lines<StdinLock<'static>>, vegetals: &Vec<String>, count_links: usize) -> HashMap<usize, Vec<usize>> {
-  let mut links: HashMap<usize, Vec<usize>> = HashMap::new();
+fn read_edges(lines: &mut Lines<StdinLock<'static>>, nodes: &Vec<String>, count_edges: usize) -> HashMap<usize, Vec<usize>> {
+  let mut edges: HashMap<usize, Vec<usize>> = HashMap::new();
 
-  for _ in 0..count_links {
+  for _ in 0..count_edges {
     if let Some(Ok(line)) = lines.next() {
       let parts: Vec<&str> = line.split_whitespace().collect();
+      assert!(parts.len() == 2, "invalid edge");
 
-      assert!(parts.len() == 2);
-      let prey = parts[0];
-      let predator = parts[1];
+      let node = nodes.iter().position(|x| x == parts[0]).expect("invalid node name");
+      let parent = nodes.iter().position(|x| x == parts[1]).expect("invalid parent node name");
 
-      let prey_id = vegetals.iter().position(|x| x == prey).unwrap();
-      let predator_id = vegetals.iter().position(|x| x == predator).unwrap();
-
-      if let Some(list) = links.get_mut(&predator_id) {
-        list.push(prey_id);
+      if let Some(list) = edges.get_mut(&parent) {
+        list.push(node);
       } else {
-        links.insert(predator_id, Vec::from([prey_id]));
+        edges.insert(parent, Vec::from([node]));
       }
     }
   }
 
-  return links;
+  return edges;
 }
 
-fn calculate_food_chain_depth(links: &HashMap<usize, Vec<usize>>, predator_id: usize) -> usize {
-  let mut seen: HashSet<usize> = HashSet::new();
-  return _calculate_food_chain_depth(links, predator_id, &mut seen);
-}
-
-fn _calculate_food_chain_depth(links: &HashMap<usize, Vec<usize>>, predator_id: usize, seen: &mut HashSet<usize>) -> usize {
-  if !seen.insert(predator_id) {
-    return 0;
-  }
+fn calculate_depth(edges: &HashMap<usize, Vec<usize>>, node: usize, seen: &mut HashSet<usize>) -> usize {
   let mut max_depth = 0;
-  if let Some(prey_ids) = links.get(&predator_id) {
-    for prey_id in prey_ids {
-      max_depth = max_depth.max(_calculate_food_chain_depth(links, *prey_id, seen));
+
+  if seen.insert(node) {
+    if let Some(children) = edges.get(&node) {
+      for child in children {
+        max_depth = max_depth.max(calculate_depth(edges, *child, seen));
+      }
     }
+    max_depth += 1;
+    seen.remove(&node);
   }
-  seen.remove(&predator_id);
-  return max_depth + 1;
+
+  return max_depth;
 }
 
-fn calculate_longest_food_chain_depth(count_vegetals: usize, links: &HashMap<usize, Vec<usize>>) -> usize {
-  let mut maximum_depth = 0;
-  for predator_id in 0..count_vegetals {
-    maximum_depth = usize::max(maximum_depth, calculate_food_chain_depth(links, predator_id))
+fn calculate_max_depth(edges: &HashMap<usize, Vec<usize>>, count_nodes: usize) -> usize {
+  let mut seen: HashSet<usize> = HashSet::new();
+  let mut max_depth = 0;
+
+  for node in 0..count_nodes {
+    max_depth = max_depth.max(calculate_depth(edges, node, &mut seen));
   }
-  return maximum_depth;
+
+  return max_depth;
 }
 
 fn main() {
   let stdin = io::stdin();
   let mut lines = stdin.lock().lines();
 
-  while let Some(Ok(line)) = lines.next() {
-    if line.len() == 0 {
-      continue;
-    }
-
-    let parts: Vec<&str> = line.split_whitespace().collect();
-
-    assert!(parts.len() == 2);
-    let count_vegetals: usize = parts[0].parse().unwrap();
-    let count_links: usize = parts[1].parse().unwrap();
-
-    if count_vegetals == 0 && count_links == 0 {
+  while let Some((count_nodes, count_edges)) = read_problem_statement(&mut lines) {
+    if count_nodes == 0 {
       break;
     }
 
-    let vegetals = read_vegetals(&mut lines, count_vegetals);
-    let links = read_links(&mut lines, &vegetals, count_links);
-  
-    let radius = calculate_longest_food_chain_depth(count_vegetals, &links);
-    println!("{}", radius);
+    let nodes = read_nodes(&mut lines, count_nodes);
+    let edges = read_edges(&mut lines, &nodes, count_edges);
+    let max_depth = calculate_max_depth(&edges, count_nodes);
+
+    println!("{}", max_depth);
   }
 }
