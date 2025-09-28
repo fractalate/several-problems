@@ -135,5 +135,9 @@ path = "PE-022.rs"
 name = "UVA-100"
 path = "UVA-100.rs"
 
+[[bin]]
+name = "UVA-10685"
+path = "UVA-10685.rs"
+
 [dependencies]
 regex = "1.11.1"
