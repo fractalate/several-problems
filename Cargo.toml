@@ -136,6 +136,10 @@ name = "UVA-100"
 path = "UVA-100.rs"
 
 [[bin]]
+name = "UVA-10000"
+path = "UVA-10000.rs"
+
+[[bin]]
 name = "UVA-10685"
 path = "UVA-10685.rs"
 
