@@ -84,12 +84,13 @@ fn solve_problem(problem: &Problem, position: usize, first: u8, tail: u8, prev_c
     if value == target_value {
       if position + 1 == problem.target_state.len() {
         return Solution::Reachable;
-      } else {
-        let tail = if position == 0 { left } else { tail };
-        let first = if position == 0 { cell } else { first };
-        if let Solution::Reachable = solve_problem(problem, position + 1, first, tail, cell, right) {
-          return Solution::Reachable;
-        }
+      }
+      
+      let tail = if position == 0 { left } else { tail };
+      let first = if position == 0 { cell } else { first };
+
+      if let Solution::Reachable = solve_problem(problem, position + 1, first, tail, cell, right) {
+        return Solution::Reachable;
       }
     }
   }
