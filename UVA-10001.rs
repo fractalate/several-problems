@@ -63,7 +63,7 @@ enum Solution {
   Reachable,
 }
 
-fn solve_problem(problem: &Problem, position: usize, first: u8, tail: u8, prev_cell: u8, prev_right: u8) -> Solution {
+fn solve_problem(problem: &Problem, position: usize, head: u8, tail: u8, prev_cell: u8, prev_right: u8) -> Solution {
   let target_value = problem.target_state[position];
 
   for i in 0..8 as u8 {
@@ -75,7 +75,7 @@ fn solve_problem(problem: &Problem, position: usize, first: u8, tail: u8, prev_c
       continue
     } else if position + 2 == problem.target_state.len() && right != tail {
       continue;
-    } else if position + 1 == problem.target_state.len() && right != first {
+    } else if position + 1 == problem.target_state.len() && right != head {
       continue;
     }
 
@@ -87,9 +87,9 @@ fn solve_problem(problem: &Problem, position: usize, first: u8, tail: u8, prev_c
       }
       
       let tail = if position == 0 { left } else { tail };
-      let first = if position == 0 { cell } else { first };
+      let head = if position == 0 { cell } else { head };
 
-      if let Solution::Reachable = solve_problem(problem, position + 1, first, tail, cell, right) {
+      if let Solution::Reachable = solve_problem(problem, position + 1, head, tail, cell, right) {
         return Solution::Reachable;
       }
     }
