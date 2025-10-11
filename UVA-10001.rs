@@ -27,6 +27,11 @@ fn read_problem(lines: &mut Lines<StdinLock<'static>>) -> Result<Option<Problem>
 
     let rule_number = parts[0].parse::<u8>().map_err(|_| io::Error::new(io::ErrorKind::InvalidData, "invalid rule number"))?;
     let number_of_cells = parts[1].parse::<usize>().map_err(|_| io::Error::new(io::ErrorKind::InvalidData, "invalid number of cells"))?;
+
+    if number_of_cells < 4 {
+      return Err(io::Error::new(io::ErrorKind::InvalidData, "invalid number of cells"));
+    }
+
     let mut target_state: Vec<u8> = Vec::new();
     target_state.reserve(number_of_cells);
 
@@ -63,17 +68,31 @@ enum Solution {
   Reachable,
 }
 
-fn solve_problem(problem: &Problem, position: usize, head: u8, tail: u8, prev_cell: u8, prev_right: u8) -> Solution {
-  let target_value = problem.target_state[position];
+fn solve_problem_step_1(problem: &Problem) -> Solution {
+  let target_value = problem.target_state[0];
 
   for i in 0..8 as u8 {
     let left = (i >> 2) & 1;
     let cell = (i >> 1) & 1;
     let right = i & 1;
 
-    if position > 0 && (left != prev_cell || cell != prev_right) {
-      continue
-    } else if position + 2 == problem.target_state.len() && right != tail {
+    let value = apply_rule(problem.rule_number, left, cell, right);
+
+    if value == target_value {
+      if let Solution::Reachable = solve_problem_step_n(problem, 1, cell, left, cell, right) {
+        return Solution::Reachable;
+      }
+    }
+  }
+
+  return Solution::GardenOfEden;
+}
+
+fn solve_problem_step_n(problem: &Problem, position: usize, head: u8, tail: u8, left: u8, cell: u8) -> Solution {
+  let target_value = problem.target_state[position];
+
+  for right in 0..2 as u8 {
+    if position + 2 == problem.target_state.len() && right != tail {
       continue;
     } else if position + 1 == problem.target_state.len() && right != head {
       continue;
@@ -86,10 +105,7 @@ fn solve_problem(problem: &Problem, position: usize, head: u8, tail: u8, prev_ce
         return Solution::Reachable;
       }
       
-      let tail = if position == 0 { left } else { tail };
-      let head = if position == 0 { cell } else { head };
-
-      if let Solution::Reachable = solve_problem(problem, position + 1, head, tail, cell, right) {
+      if let Solution::Reachable = solve_problem_step_n(problem, position + 1, head, tail, cell, right) {
         return Solution::Reachable;
       }
     }
@@ -99,7 +115,7 @@ fn solve_problem(problem: &Problem, position: usize, head: u8, tail: u8, prev_ce
 }
 
 fn print_solution(problem: &Problem) {
-  match solve_problem(problem, 0, 0, 0, 0, 0) {
+  match solve_problem_step_1(problem) {
     Solution::GardenOfEden => println!("GARDEN OF EDEN"),
     Solution::Reachable => println!("REACHABLE"),
   }
