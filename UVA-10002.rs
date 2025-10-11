@@ -2,6 +2,7 @@
 
 use std::io::{self, Read, Result, StdinLock};
 
+// Maybe some day we don't just read the whole input, but instead read portions and produce the words.
 struct WordsIterator<'a> {
   stdin: &'a mut StdinLock<'static>,
   has_read: bool,
@@ -50,12 +51,49 @@ impl<'a> Iterator for WordsIterator<'a> {
   }
 }
 
-fn main() {
+struct Problem {
+  points: Vec<(f64, f64)>,
+}
+
+fn read_problem(words: &mut WordsIterator) -> Result<Option<Problem>> {
+  if let Some(Ok(problem_size)) = words.next() {
+    let problem_size: usize = problem_size.parse().map_err(|_| io::Error::new(io::ErrorKind::InvalidData, "invalid problem size"))?;
+
+    if problem_size >= 3 {
+      let mut points: Vec<(f64, f64)> = Vec::new();
+
+      for i in 0..problem_size {
+        let x: f64 = if let Some(Ok(x)) = words.next() {
+          x.parse().map_err(|_| io::Error::new(io::ErrorKind::InvalidData, "invalid coordinate"))?
+        } else {
+          return Err(io::Error::new(io::ErrorKind::InvalidData, "expected coordinate"));
+        };
+
+        let y: f64 = if let Some(Ok(y)) = words.next() {
+          y.parse().map_err(|_| io::Error::new(io::ErrorKind::InvalidData, "invalid coordinate"))?
+        } else {
+          return Err(io::Error::new(io::ErrorKind::InvalidData, "expected coordinate"));
+        };
+
+        points.push((x, y));
+      }
+
+      return Ok(Some(Problem {
+        points,
+      }));
+    }
+  }
+
+  return Ok(None);
+}
+
+fn main() -> Result<()> {
   let mut stdin = io::stdin().lock();
   let mut words = WordsIterator::new(&mut stdin);
 
-  while let Some(Ok(word)) = words.next() {
-    println!("word is {word}");
+  while let Some(problem) = read_problem(&mut words)? {
+    println!("READ ONE {}", problem.points.len());
   }
 
+  return Ok(());
 }
