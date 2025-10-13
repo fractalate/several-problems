@@ -18,6 +18,13 @@ Please see [MANIFEST.md](./MANIFEST.md) for an outline of the files in this proj
 
 ### Languages
 
+**C++**
+
+```bash
+g++ UVA-10003.cpp
+./a.out
+```
+
 **Go**
 
 ```bash
@@ -27,7 +34,6 @@ go run PE-001.go
 **Julia**
 
 In the `julia` interpreter:
-
 
 ```julia
 using Pkg

@@ -19,6 +19,12 @@ Sample input/output files are located in [files](./files) and are prefixed with 
 
 ## Language Support
 
+### C++
+
+Solutions have `.cpp` file extension.
+
+* [.gitignore](./.gitignore)
+
 ### Go
 
 Solutions have `.go` file extension.

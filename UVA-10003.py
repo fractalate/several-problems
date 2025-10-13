@@ -1,20 +1,23 @@
+# https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=944
+
 import sys
 
-from functools import lru_cache
-
-@lru_cache(None)
-def calculate_minimum_cost(stick, cuts):
-    length = stick
-    best_cost = float('inf')
-    for i, cut in enumerate(cuts):
-        cost = 0
-        if i > 0:
-            cost += calculate_minimum_cost(cut, cuts[:i])
-        if i < len(cuts) - 1:
-            cost += calculate_minimum_cost(stick - cut, tuple(c - cut for c in cuts[i+1:]))
-        if cost < best_cost:
-            best_cost = cost
-    return length + best_cost
+def calculate_minimum_cost(length, cuts):
+    cuts = [0] + cuts + [length]
+    dp = [
+        [0] * len(cuts)
+            for _ in range(len(cuts))
+    ]
+    for sub_len in range(2, len(cuts)):
+        for i in range(0, len(cuts) - sub_len):
+            j = i + sub_len
+            best = float('inf')
+            for k in range(i + 1, j):
+                cost = dp[i][k] + dp[k][j] + (cuts[j] - cuts[i])
+                if cost < best:
+                    best = cost
+            dp[i][j] = best
+    return dp[0][len(cuts) - 1]
 
 while length := sys.stdin.readline():
     length = int(length.strip())
@@ -25,6 +28,5 @@ while length := sys.stdin.readline():
     cuts = sys.stdin.readline()
     cuts = [int(cut) for cut in cuts.strip().split() if cut]
     cuts.sort()
-    cuts = tuple(cuts)
     minimum_cost = calculate_minimum_cost(length, cuts)
     print(f"The minimum cutting is {minimum_cost}.")

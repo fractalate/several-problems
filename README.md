@@ -13,6 +13,7 @@ Solutions to problem sets and competitive programming problems in various langua
 <table>
 <thead>
 <tr>
+<th>C++</th>
 <th>Go</th>
 <th>Julia</th>
 <th>Python</th>
@@ -24,9 +25,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2022-01A.rs">AOC-2022-01A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -36,9 +39,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2022-02A.rs">AOC-2022-02A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -48,9 +53,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2022-03A.rs">AOC-2022-03A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -60,9 +67,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-01A.rs">AOC-2024-01A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -72,9 +81,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-02A.rs">AOC-2024-02A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -84,9 +95,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-03A.rs">AOC-2024-03A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -96,9 +109,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-04A.rs">AOC-2024-04A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -108,9 +123,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-05A.rs">AOC-2024-05A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -120,9 +137,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-06A.rs">AOC-2024-06A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -132,9 +151,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-07A.rs">AOC-2024-07A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -144,9 +165,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-08A.rs">AOC-2024-08A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -156,9 +179,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-09A.rs">AOC-2024-09A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -168,9 +193,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-10A.rs">AOC-2024-10A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -180,15 +207,18 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-11A.rs">AOC-2024-11A.rs</a></td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-11B.rs">AOC-2024-11B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td><a href="./PE-001.go">PE-001.go</a></td>
 <td><a href="./PE-001.jl">PE-001.jl</a></td>
 <td><a href="./PE-001.py">PE-001.py</a></td>
@@ -196,11 +226,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-002.jl">PE-002.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-003.jl">PE-003.jl</a></td>
 <td></td>
@@ -208,11 +240,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-004.jl">PE-004.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-005.jl">PE-005.jl</a></td>
 <td></td>
@@ -220,11 +254,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-006.jl">PE-006.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-007.jl">PE-007.jl</a></td>
 <td></td>
@@ -232,11 +268,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-008.jl">PE-008.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-009.jl">PE-009.jl</a></td>
 <td></td>
@@ -244,11 +282,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-010.jl">PE-010.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-011.jl">PE-011.jl</a></td>
 <td></td>
@@ -256,11 +296,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-012.jl">PE-012.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-013.jl">PE-013.jl</a></td>
 <td></td>
@@ -268,11 +310,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-014.jl">PE-014.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-015.jl">PE-015.jl</a></td>
 <td></td>
@@ -280,11 +324,13 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-016.jl">PE-016.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-017.jl">PE-017.jl</a></td>
 <td></td>
@@ -292,17 +338,20 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-018.jl">PE-018.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
+<td></td>
 <td><a href="./PE-019.jl">PE-019.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-020.jl">PE-020.jl</a></td>
 <td></td>
@@ -312,9 +361,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-021.rs">PE-021.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -324,9 +375,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./UVA-100.rs">UVA-100.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -336,15 +389,25 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./UVA-10001.rs">UVA-10001.rs</a></td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./UVA-10002.rs">UVA-10002.rs</a></td>
 </tr>
 <tr>
+<td><a href="./UVA-10003.cpp">UVA-10003.cpp</a></td>
+<td></td>
+<td></td>
+<td><a href="./UVA-10003.py">UVA-10003.py</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -360,6 +423,13 @@ Please see [MANIFEST.md](./MANIFEST.md) for an outline of the files in this proj
 
 ### Languages
 
+**C++**
+
+```bash
+g++ UVA-10003.cpp
+./a.out
+```
+
 **Go**
 
 ```bash
@@ -369,7 +439,6 @@ go run PE-001.go
 **Julia**
 
 In the `julia` interpreter:
-
 
 ```julia
 using Pkg

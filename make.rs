@@ -77,6 +77,11 @@ fn output_solutions_table<'a>(output: &mut File) -> io::Result<()> {
         pset = "AOC";
       }
 
+      if file_name.ends_with(".cpp") {
+        suffix = ".cpp";
+        lang = "C++";
+      }
+      else
       if file_name.ends_with(".jl") {
         suffix = ".jl";
         lang = "Julia";
