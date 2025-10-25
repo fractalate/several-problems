@@ -29,8 +29,6 @@ bool you_bi(std::vector<Node> &nodes, std::set<std::pair<size_t, size_t>> &edges
 
         nodes[i].color = color;
 
-        std::cout << "node " << i << " has color " << nodes[i].color << std::endl;
-
         for (size_t j : nodes[i].neighbors) {
             if (seen.find(j) == seen.end()) { // if not seen
                 queue.push_back(std::make_pair(color, j));
