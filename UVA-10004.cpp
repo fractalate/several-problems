@@ -33,16 +33,14 @@ bool you_bi(std::vector<Node> &nodes, std::set<std::pair<size_t, size_t>> &edges
             if (seen.find(j) == seen.end()) { // if not seen
                 queue.push_back(std::make_pair(color, j));
                 seen.insert(j);
+
+                size_t a = i, b = j;
+                if (b < a) { std::swap(a, b); }
+                auto where = edges.find(std::make_pair(a, b));
+                if (where != edges.end()) {
+                    edges.erase(where);
+                }
             }
-
-            size_t a = i;
-            size_t b = j;
-
-            /*if (b < a) { std::swap(a, b); }
-            auto where = edges.find(std::make_pair(a, b));
-            if (where != edges.end()) {
-                edges.erase(where);
-            }*/
         }
     }
 
