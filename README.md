@@ -414,6 +414,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 </tr>
 <tr>
+<td><a href="./UVA-10005.cpp">UVA-10005.cpp</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td></td>
 <td></td>
 <td></td>
