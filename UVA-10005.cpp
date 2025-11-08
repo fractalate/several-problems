@@ -53,6 +53,7 @@ bool read_problem(std::set<Point<int>>& points, double& radius) {
 }
 
 size_t rand_int(size_t n) {
+    return 0;
     if (n <= 1) {
         return 0;
     }
@@ -89,6 +90,11 @@ Disc _welzl_trivial(std::vector<Point<int>> const& boundary) {
         double radius = distance(boundary[0], boundary[1]) / 2.0;
         return Disc{{a, b}, radius};
     }
+
+    // solving the linear system
+    // |u v||a| |l|
+    // |   || |=| |
+    // |w z||b| |m|
 
     double x0 = boundary[0].x;
     double y0 = boundary[0].y;
