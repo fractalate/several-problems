@@ -2,8 +2,6 @@
 //
 // g++ -lm -lcrypt -O2 -std=c++11 -pipe -DONLINE_JUDGE UVA-10005.cpp
 
-// TODO use welzl's algorithm! https://en.wikipedia.org/wiki/Smallest-circle_problem
-
 #include <algorithm>
 #include <iostream>
 #include <cmath>
