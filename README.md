@@ -431,6 +431,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td><a href="./UVA-10007.py">UVA-10007.py</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 <td><a href="./UVA-10685.rs">UVA-10685.rs</a></td>
 </tr>
