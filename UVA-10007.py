@@ -4,10 +4,10 @@ import sys
 from functools import lru_cache
 
 def factorial(n):
-    t = 1
+    result = 1
     for i in range(2, n + 1):
-        t *= i
-    return t
+        result *= i
+    return result
 
 @lru_cache(301)
 def count_unlabeled_trees(n):
