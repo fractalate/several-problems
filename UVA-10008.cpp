@@ -22,12 +22,12 @@ int main() {
         }
     }
 
+    // Order by count descending; on a tie, order alphabetical (increasing).
     std::vector<std::pair<int, int>> result;
     result.reserve('Z' - 'A' + 1);
     for (int c = 'A'; c <= 'Z'; ++c) {
         result.push_back(std::make_pair(char_count[c], -c));
     }
-
     std::sort(result.rbegin(), result.rend());
 
     for (auto it = result.begin(); it != result.end(); ++it) {
