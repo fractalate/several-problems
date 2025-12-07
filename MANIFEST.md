@@ -29,6 +29,10 @@ Solutions have `.cpp` file extension.
 
 Solutions have `.go` file extension.
 
+### Haskell
+
+Solutions have `.hs` file extension.
+
 ### Julia
 
 Solutions have `.jl` file extension.
