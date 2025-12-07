@@ -82,14 +82,19 @@ fn output_solutions_table<'a>(output: &mut File) -> io::Result<()> {
         lang = "C++";
       }
       else
-      if file_name.ends_with(".jl") {
-        suffix = ".jl";
-        lang = "Julia";
-      }
-      else
       if file_name.ends_with(".go") {
         suffix = ".go";
         lang = "Go";
+      }
+      else
+      if file_name.ends_with(".hs") {
+        suffix = ".hs";
+        lang = "Haskell";
+      }
+      else
+      if file_name.ends_with(".jl") {
+        suffix = ".jl";
+        lang = "Julia";
       }
       else
       if file_name.ends_with(".py") {

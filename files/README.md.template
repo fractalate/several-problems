@@ -31,6 +31,12 @@ g++ UVA-10003.cpp
 go run PE-001.go
 ```
 
+**Haskell**
+
+```bash
+runghc AOC-2024-01.hs
+```
+
 **Julia**
 
 In the `julia` interpreter:
