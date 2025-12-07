@@ -25,6 +25,12 @@ g++ UVA-10003.cpp
 ./a.out
 ```
 
+**Clojure**
+
+```bash
+clojure AOC-2024-01A.clj
+```
+
 **Go**
 
 ```bash

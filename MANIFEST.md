@@ -25,6 +25,10 @@ Solutions have `.cpp` file extension.
 
 * [.gitignore](./.gitignore)
 
+### Clojure
+
+Solutions have `.clj` file extension.
+
 ### Go
 
 Solutions have `.go` file extension.

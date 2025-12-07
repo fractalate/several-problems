@@ -14,6 +14,7 @@ Solutions to problem sets and competitive programming problems in various langua
 <thead>
 <tr>
 <th>C++</th>
+<th>Clojure</th>
 <th>Go</th>
 <th>Haskell</th>
 <th>Julia</th>
@@ -28,9 +29,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2022-01A.rs">AOC-2022-01A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -44,9 +47,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2022-02A.rs">AOC-2022-02A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -60,9 +65,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2022-03A.rs">AOC-2022-03A.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -72,6 +79,7 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td><a href="./AOC-2024-01A.clj">AOC-2024-01A.clj</a></td>
 <td></td>
 <td><a href="./AOC-2024-01A.hs">AOC-2024-01A.hs</a></td>
 <td></td>
@@ -80,13 +88,15 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td></td>
+<td><a href="./AOC-2024-01B.clj">AOC-2024-01B.clj</a></td>
 <td></td>
-<td></td>
+<td><a href="./AOC-2024-01B.hs">AOC-2024-01B.hs</a></td>
 <td></td>
 <td></td>
 <td><a href="./AOC-2024-01B.rs">AOC-2024-01B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -100,9 +110,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-02B.rs">AOC-2024-02B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -116,9 +128,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-03B.rs">AOC-2024-03B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -132,9 +146,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-04B.rs">AOC-2024-04B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -148,9 +164,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-05B.rs">AOC-2024-05B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -164,9 +182,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-06B.rs">AOC-2024-06B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -180,9 +200,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-07B.rs">AOC-2024-07B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -196,9 +218,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-08B.rs">AOC-2024-08B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -212,9 +236,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-09B.rs">AOC-2024-09B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -228,9 +254,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-10B.rs">AOC-2024-10B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -244,9 +272,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./AOC-2024-11B.rs">AOC-2024-11B.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td><a href="./PE-001.go">PE-001.go</a></td>
 <td></td>
@@ -258,11 +288,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-002.jl">PE-002.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -274,11 +306,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-004.jl">PE-004.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -290,11 +324,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-006.jl">PE-006.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -306,11 +342,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-008.jl">PE-008.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -322,11 +360,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-010.jl">PE-010.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -338,11 +378,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-012.jl">PE-012.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -354,11 +396,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-014.jl">PE-014.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -370,11 +414,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-016.jl">PE-016.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -386,6 +432,7 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-018.jl">PE-018.jl</a></td>
 <td></td>
 <td></td>
@@ -394,11 +441,13 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-019.jl">PE-019.jl</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -412,9 +461,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./PE-021.rs">PE-021.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -428,9 +479,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./UVA-100.rs">UVA-100.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -444,9 +497,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 <td><a href="./UVA-10001.rs">UVA-10001.rs</a></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -456,6 +511,7 @@ Solutions to problem sets and competitive programming problems in various langua
 </tr>
 <tr>
 <td><a href="./UVA-10003.cpp">UVA-10003.cpp</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -469,9 +525,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="./UVA-10005.cpp">UVA-10005.cpp</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -485,8 +543,10 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -501,9 +561,11 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="./UVA-10009.cpp">UVA-10009.cpp</a></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -517,8 +579,10 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -541,6 +605,12 @@ Please see [MANIFEST.md](./MANIFEST.md) for an outline of the files in this proj
 ```bash
 g++ UVA-10003.cpp
 ./a.out
+```
+
+**Clojure**
+
+```bash
+clojure AOC-2024-01A.clj
 ```
 
 **Go**
