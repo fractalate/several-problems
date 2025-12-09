@@ -99,7 +99,7 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td><a href="./AOC-2024-02A.hs">AOC-2024-02A.hs</a></td>
 <td></td>
 <td></td>
 <td><a href="./AOC-2024-02A.rs">AOC-2024-02A.rs</a></td>
@@ -108,7 +108,7 @@ Solutions to problem sets and competitive programming problems in various langua
 <td></td>
 <td></td>
 <td></td>
-<td></td>
+<td><a href="./AOC-2024-02B.hs">AOC-2024-02B.hs</a></td>
 <td></td>
 <td></td>
 <td><a href="./AOC-2024-02B.rs">AOC-2024-02B.rs</a></td>
