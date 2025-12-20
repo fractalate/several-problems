@@ -1,10 +1,5 @@
 type State = Int
-
-data Direction = L | R
-  deriving Show
-
-type Move = (Direction, State)
-
+type Move = Int
 type Problem = [Move]
 
 dialSize = 100
@@ -13,21 +8,21 @@ initialState :: State
 initialState = 50
 
 turn :: [(State, Int)] -> Move -> [(State, Int)]
-turn ((state, count):states) (dir, amount) = (newState, m1 + m2) : (state, count) : states
+turn ((state, count):states) amount = (newState, zeros) : (state, count) : states
   where
-    delta = case dir of
-      L -> - (mod amount dialSize)
-      R -> mod amount dialSize
-    m1 = div amount dialSize
-    m2 = case dir of
-      L -> if state > 0 && state <= -delta then 1 else 0
-      R -> if state >= dialSize - delta then 1 else 0
-    newState = mod (state + delta) dialSize
+    newState = mod (state + amount) dialSize
+    mainZeros = div (abs amount) dialSize
+    extraZeros
+      | state == 0 = if amount == 0 then 1 else 0
+      | amount < 0 = if newState >= state || newState == 0 then 1 else 0
+      | amount > 0 = if newState <= state then 1 else 0
+      | otherwise = 0
+    zeros = mainZeros + extraZeros
 
 parseLine :: String -> Move
 parseLine (c:cs)
-  | c == 'L' = (L, read cs)
-  | c == 'R' = (R, read cs)
+  | c == 'L' = -read cs
+  | c == 'R' = read cs
   | otherwise = error "invalid input line"
 
 readProblem :: IO Problem

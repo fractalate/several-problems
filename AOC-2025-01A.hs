@@ -3,7 +3,7 @@ type State = Int
 data Direction = L | R
   deriving Show
 
-type Move = (Direction, State)
+type Move = (Direction, Int)
 
 type Problem = [Move]
 
