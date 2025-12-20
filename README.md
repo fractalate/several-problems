@@ -287,6 +287,15 @@ Solutions to problem sets and competitive programming problems in various langua
 <tr>
 <td></td>
 <td></td>
+<td></td>
+<td><a href="./AOC-2025-01B.hs">AOC-2025-01B.hs</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
 <td><a href="./PE-001.go">PE-001.go</a></td>
 <td></td>
 <td><a href="./PE-001.jl">PE-001.jl</a></td>
